@@ -11,12 +11,8 @@ add vagrant box:
 
 vagrant box add precise64 http://files.vagrantup.com/precise64.box
 
-cd hfn_dev
+cd rails3_development_vagrant_machine
 bundle install
 vagrant up
 vagrant ssh
-rvm install 1.9.3 --disable-binary
-cd vagrant-data
-rails s
-
 
