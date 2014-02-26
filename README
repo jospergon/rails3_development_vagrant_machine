@@ -1,0 +1,22 @@
+install
+=======
+install vagrant rpm https://dl.bintray.com/mitchellh/vagrant/vagrant_1.4.3_x86_64.rpm
+
+install vagrant plugins:
+
+vagrant plugin install vagrant-omnibus
+vagrant plugin install vagrant-berkshelf
+
+add vagrant box:
+
+vagrant box add precise64 http://files.vagrantup.com/precise64.box
+
+cd hfn_dev
+bundle install
+vagrant up
+vagrant ssh
+rvm install 1.9.3 --disable-binary
+cd vagrant-data
+rails s
+
+

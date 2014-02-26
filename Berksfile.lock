@@ -1,0 +1,54 @@
+{
+  "sources": {
+    "mysql": {
+      "locked_version": "4.0.20"
+    },
+    "database": {
+      "locked_version": "1.6.0"
+    },
+    "redisio": {
+      "locked_version": "1.7.1"
+    },
+    "rvm": {
+      "locked_version": "0.9.1",
+      "git": "git://github.com/fnichol/chef-rvm.git",
+      "ref": "87f58d428c160337c1581ed1130a1a53d94e5126"
+    },
+    "required_pkgs": {
+      "path": "./cookbooks/required_pkgs"
+    },
+    "ruby_sources": {
+      "path": "./cookbooks/ruby_sources"
+    },
+    "mysql_permissions": {
+      "path": "./cookbooks/mysql_permissions"
+    },
+    "openssl": {
+      "locked_version": "1.1.0"
+    },
+    "build-essential": {
+      "locked_version": "1.4.2"
+    },
+    "postgresql": {
+      "locked_version": "3.3.4"
+    },
+    "apt": {
+      "locked_version": "2.3.8"
+    },
+    "aws": {
+      "locked_version": "2.0.0"
+    },
+    "xfs": {
+      "locked_version": "1.1.0"
+    },
+    "ulimit": {
+      "locked_version": "0.3.2"
+    },
+    "java": {
+      "locked_version": "1.19.2"
+    },
+    "chef_gem": {
+      "locked_version": "0.1.0"
+    }
+  }
+}
