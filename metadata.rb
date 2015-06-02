@@ -1,0 +1,1 @@
+name 'rails_development_vagrant_machine'

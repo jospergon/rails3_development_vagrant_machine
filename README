@@ -1,21 +1,22 @@
-Install Mysql and Redis for rails development.
+Install Mysql and Redis for rails development. This repo use the new ChefDk package that contains:
+
+- Chef
+- Berkshelf 3.0
+- Test Kitchen
+- ChefSpec
+- Foodcritic
 
 install
 =======
-install vagrant package from https://www.vagrantup.com/downloads.html
+Download and install VirtualBox from https://www.virtualbox.org/wiki/Downloads
+Download and install chefdk from https://downloads.chef.io/chef-dk/
+Download and install vagrant package from https://www.vagrantup.com/downloads.html
 
-install vagrant plugins:
-
-vagrant plugin install vagrant-omnibus
-vagrant plugin install vagrant-berkshelf
-
-add vagrant box:
-
-vagrant box add precise64 http://files.vagrantup.com/precise64.box
-
+git clone git@github.com:jospergon/rails_development_vagrant_machine.git
 cd rails_development_vagrant_machine
 bundle install
-vagrant up
+kitchen create default-ubuntu-1404
+kitchen converge default-ubuntu-1404
 
 
 In the rails project add the follows lines n the file config/database.yml
@@ -25,7 +26,7 @@ base: &base
   encoding: utf8
   pool: 5
   username: root
-  password: 1234
+  password: "1234"
   host: localhost
 
 development:

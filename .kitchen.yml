@@ -1,0 +1,21 @@
+---
+driver:
+  name: vagrant
+  network:
+    - ["forwarded_port", {guest: 3306, host: 3306}]
+    - ["forwarded_port", {guest: 6379, host: 6379}]
+
+provisioner:
+  name: chef_solo
+
+platforms:
+  - name: ubuntu-14.04
+
+suites:
+  - name: default
+    run_list:
+      - recipe[apt]
+      - recipe[mysql_install]
+      - recipe[redis]
+      - recipe[required_pkgs]
+      - recipe[mysql_permissions]
