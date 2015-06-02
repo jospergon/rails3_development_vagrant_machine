@@ -2,12 +2,11 @@ name "dev"
 
 default_attributes(
   :rvm => {
-    :version => '1.17.10',
     :user_installs => [
       {
         :user => "vagrant",
-        :default_ruby => "1.9.3",
-        :rubies => ["1.9.3 --disable-binary"],
+        :default_ruby => node['ruby']['version'],
+        :rubies => ["#{node['ruby']['version']} --disable-binary"],
         :group => ["vagrant"]
       }
     ]

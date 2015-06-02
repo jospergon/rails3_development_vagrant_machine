@@ -24,7 +24,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # accessing "localhost:8080" will access port 80 on the guest machine.
   config.vm.network :forwarded_port, guest: 3000, host: 3000
   config.vm.network :forwarded_port, guest: 3306, host: 3306
-
+  config.vm.network :forwarded_port, guest: 6379, host: 6379
+  
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
   config.vm.network :private_network, ip: "192.168.33.10"
@@ -42,7 +43,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # the path on the host to the actual folder. The second argument is
   # the path on the guest to mount the folder. And the optional third
   # argument is a set of non-required options.
-  config.vm.synced_folder "/home/jose/rails-projects", "/vagrant_data", type: "nfs"
+  # config.vm.synced_folder "/home/user/rails-projects", "/vagrant_data", type: "nfs"
 
   # Provider-specific configuration so you can fine-tune various
   # backing providers for Vagrant. These expose provider-specific options.
@@ -53,7 +54,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     #vb.gui = true
 
     # Use VBoxManage to customize the VM. For example to change memory:
-    vb.customize ["modifyvm", :id, "--memory", "2048"]
+    vb.customize ["modifyvm", :id, "--memory", "1024"]
   end
   #
   # View the documentation for the provider you're using for more
@@ -92,7 +93,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     #chef.data_bags_path = "../my-recipes/data_bags"
     #chef.add_recipe "mysql"
     chef.add_role "dev"
-  
+
     # You may also specify custom JSON attributes:
     #chef.json = { :mysql_password => "foo" }
   end

@@ -1,6 +1,8 @@
+Install Mysql and Redis for rails development.
+
 install
 =======
-install vagrant rpm https://dl.bintray.com/mitchellh/vagrant/vagrant_1.4.3_x86_64.rpm
+install vagrant package from https://www.vagrantup.com/downloads.html
 
 install vagrant plugins:
 
@@ -14,5 +16,22 @@ vagrant box add precise64 http://files.vagrantup.com/precise64.box
 cd rails3_development_vagrant_machine
 bundle install
 vagrant up
-vagrant ssh
 
+
+In the rails project add the follows lines n the file config/database.yml
+
+base: &base
+  adapter: mysql2
+  encoding: utf8
+  pool: 5
+  username: root
+  password: 1234
+  host: localhost
+
+development:
+  database: healthyfoodnow_dev
+  <<: *base
+
+test:
+  database: healthyfoodnow_test
+  <<: *base
