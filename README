@@ -15,8 +15,9 @@ Download and install vagrant package from https://www.vagrantup.com/downloads.ht
 git clone git@github.com:jospergon/rails_development_vagrant_machine.git
 cd rails_development_vagrant_machine
 bundle install
-kitchen create default-ubuntu-1404
-kitchen converge default-ubuntu-1404
+
+
+vagrant up
 
 
 In the rails project add the follows lines n the file config/database.yml

@@ -1,6 +1,8 @@
 ---
 driver:
   name: vagrant
+  customize:
+    memory: 1024
   network:
     - ["forwarded_port", {guest: 3306, host: 3306}]
     - ["forwarded_port", {guest: 6379, host: 6379}]
