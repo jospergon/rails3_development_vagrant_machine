@@ -13,7 +13,7 @@ add vagrant box:
 
 vagrant box add precise64 http://files.vagrantup.com/precise64.box
 
-cd rails3_development_vagrant_machine
+cd rails_development_vagrant_machine
 bundle install
 vagrant up
 
