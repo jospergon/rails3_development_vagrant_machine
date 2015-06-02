@@ -16,6 +16,7 @@ suites:
     run_list:
       - recipe[apt]
       - recipe[mysql_install]
-      - recipe[redis]
+      - recipe[redisio]
+      - recipe[redisio::enable]
       - recipe[required_pkgs]
       - recipe[mysql_permissions]
