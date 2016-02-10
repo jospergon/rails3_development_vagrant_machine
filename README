@@ -1,4 +1,5 @@
-Install Mysql and Redis for rails development. This repo use the new ChefDk package that contains:
+Install Mysql, Posgresql and Redis for rails development.
+This repo use the new ChefDk package that contains:
 
 - Chef
 - Berkshelf 3.0
@@ -9,7 +10,7 @@ Install Mysql and Redis for rails development. This repo use the new ChefDk pack
 install
 =======
 Download and install VirtualBox from https://www.virtualbox.org/wiki/Downloads
-Download and install chefdk from https://downloads.chef.io/chef-dk/
+Download and install ChefDk from https://downloads.chef.io/chef-dk/
 Download and install vagrant package from https://www.vagrantup.com/downloads.html
 
 git clone git@github.com:jospergon/rails_development_vagrant_machine.git
@@ -22,6 +23,8 @@ vagrant up
 
 In the rails project add the follows lines n the file config/database.yml
 
+Mysql
+=====
 base: &base
   adapter: mysql2
   encoding: utf8
@@ -31,9 +34,28 @@ base: &base
   host: localhost
 
 development:
-  database: healthyfoodnow_dev
+  database: database_name
   <<: *base
 
 test:
-  database: healthyfoodnow_test
+  database: database_name
   <<: *base
+
+Postgresql
+==========
+
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  host: localhost
+  username: postgres
+  password: localhost
+
+development:
+  <<: *default
+  database: database_name
+
+test:
+  <<: *default
+  database: database_name
