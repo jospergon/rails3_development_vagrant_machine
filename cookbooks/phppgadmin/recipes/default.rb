@@ -29,16 +29,6 @@ apache_config 'phppgadmin' do
   enable true
 end
 
-# directory '/etc/apache2/conf.d' do
-#   owner 'root'
-#   group 'root'
-#   mode 00755
-#   recursive true
-#   action :create
-# end
-
-
-
 service "apache2" do
   action :restart
 end
