@@ -1,0 +1,10 @@
+name             'phppgadmin'
+maintainer       'YOUR_NAME'
+maintainer_email 'YOUR_EMAIL'
+license          'All rights reserved'
+description      'Installs/Configures phppgadmin'
+long_description 'Installs/Configures phppgadmin'
+version          '0.1.0'
+
+depends 'apt'
+depends 'apache2', '~> 3.1.0'
