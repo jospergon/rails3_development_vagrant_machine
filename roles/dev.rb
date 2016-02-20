@@ -26,13 +26,13 @@ default_attributes(
 
 run_list(
   "recipe[apt]",
-  # "recipe[mysql_install]",
-  # "recipe[redisio]",
-  # "recipe[redisio::enable]",
-  # "recipe[required_pkgs]",
-  # "recipe[mysql_permissions]",
-  # "recipe[postgresql]",
-  # "recipe[postgresql::server]",
+  "recipe[mysql_install]",
+  "recipe[redisio]",
+  "recipe[redisio::enable]",
+  "recipe[required_pkgs]",
+  "recipe[mysql_permissions]",
+  "recipe[postgresql]",
+  "recipe[postgresql::server]",
   "recipe[apache2]",
   "recipe[phppgadmin]"
 )
