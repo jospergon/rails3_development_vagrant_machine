@@ -13,7 +13,7 @@
 	// Display name for the server on the login screen
 	$conf['servers'][0]['desc'] = 'PostgreSQL';
 
-	<%= node['phppgadmin']['servers'].each_with_index do |server, i| %>
+	<% node['phppgadmin']['servers'].each_with_index do |server, i| %>
 		// Hostname or IP address for server.  Use '' for UNIX domain socket.
 		// use 'localhost' for TCP/IP connection on this computer
 		$conf['servers'][<%= i %>]['host'] = "<%= server %>";
