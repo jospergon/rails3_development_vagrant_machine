@@ -17,8 +17,8 @@ apache_module "mpm_prefork" do
   enable true
 end
 
-cookbook_file '/etc/apache2/conf-available/phppgadmin.conf' do
-  source 'phppgadmin'
+cookbook_file '/etc/phppgadmin/config.inc.php' do
+  source 'config.inc.php'
   owner 'root'
   group 'root'
   mode 00644

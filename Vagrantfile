@@ -41,6 +41,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     # accessing "localhost:8080" will access port 80 on the guest machine.
     mysqlredis.vm.network :forwarded_port, host: 3306, guest: 3306
     mysqlredis.vm.network :forwarded_port, host: 6379 , guest: 6379
+    mysqlredis.vm.network :forwarded_port, host: 1234 , guest: 80
 
     # Share an additional folder to the guest VM. The first argument is
     # the path on the host to the actual folder. The second argument is

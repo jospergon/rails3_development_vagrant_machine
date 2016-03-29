@@ -8,5 +8,6 @@ run_list(
   "recipe[redisio]",
   "recipe[redisio::enable]",
   "recipe[required_pkgs]",
-  "recipe[mysql_permissions]"
+  "recipe[mysql_permissions]",
+  "recipe[phpmyadmin]"
 )
