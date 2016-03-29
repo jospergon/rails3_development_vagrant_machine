@@ -18,7 +18,7 @@ mysql_database_user 'phpmyadmin' do
   password      node['phpmyadmin']['database']['password']
   database_name 'phpmyadmin'
   host          '%'
-  privileges    [:select,:update,:insert]
+  privileges    [:all]
   action        :grant
 end
 
