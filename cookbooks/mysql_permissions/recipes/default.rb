@@ -12,6 +12,6 @@ mysql_database_user 'root' do
   connection    mysql_connection_info
   database_name '*.*'
   host          '%'
-  privileges    [:select,:update,:insert]
+  privileges    [:all]
   action        :grant
 end
